@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './style';
-import { Navbar,Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA, Footer } from './components';
+import { Navbar,Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA, Footer } from './component';
 
-const App = () => {
+const App = () => { 
+  
+
+ 
   return (
     <div className='bg-primary w-full overflow-hidden'>
+      
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
          <Navbar />

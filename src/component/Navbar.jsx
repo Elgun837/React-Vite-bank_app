@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
+import Language from "./language";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
@@ -41,9 +42,11 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
+             
           </ul>
         </div>
       </div>
+      <Language />
     </nav>
   );
 };
