@@ -8,15 +8,16 @@ import { Suspense } from "react";
 
 function language() {
   const { t, i18n } = useTranslation();
-  const dispatch = useDispatch();
-  const language = useSelector(state => state.site);
+  
+  
   const languages = ['En','Az'];
 
 
   
 const handleLanguage =  lang => {
      i18n.changeLanguage(lang)
-     dispatch(setLanguage(lang))
+    
+     console.log(lang)
 }
 
   return (
@@ -24,7 +25,7 @@ const handleLanguage =  lang => {
         {languages.map((lang, index) =>(
             <button  className="text-white m-2 py-2 px-1 rounded-[10px]" key={index} onClick={() => handleLanguage(lang) } >{lang}</button>
         ))}
-        <h2 className='text-white'>{ t("title")}</h2>
+        <h2 className="text-white">{t('title')}</h2>
     </Suspense>
   )
 }
