@@ -1,7 +1,9 @@
 {
-    "title": "Title",
+    "Hero":{
+      "title": "20%Discount for 1 MonthAccount",
     "Welcome": "Welcome to React and react-i18next",
     "description": {
       "part2": "some description"
     }
-  }
+    }
+}

@@ -1,7 +1,9 @@
 {
-    "title": "Başlıq",
+    "Hero": {
+      "title": "1 Ay Hesaba 20% Endirim",
     "Welcome": "Salam",
     "description": {
       "part2": "Açıqlama"
     }
-  }
+    }
+}

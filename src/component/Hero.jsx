@@ -2,7 +2,10 @@ import React from "react";
 import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 const Hero = () => {
+  const {t, i18n ,i18n: { language }} = useTranslation();
   return (
     <section
       id="home"
@@ -17,9 +20,8 @@ const Hero = () => {
         >
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2`}>
-            <span className="text-white">20%</span>
-            Discount for <span className="text-white">1 Month</span>
-            Account
+            {t('Hero.title')}
+            
           </p>
         </div>
         <div className="flex flex-row justify-between items-center w-full">

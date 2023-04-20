@@ -13,31 +13,41 @@ const resources = {
     translation: translationAz
   }
 };
+export const languages = Object.entries(resources).map(([lang]) => lang)
 
-i18n.use(I18NextHttpBackend).use(LanguageDetector).use(initReactI18next).init({
- 
-  
-  fallbackLng: "En",
-  debug: true,
-  initImmediate: true,
-  keySeparator: true,
-  nsSeparator: true,
-  resources,
-  detection:{
-    order:["queryString","cookie"],
-    cache:["cookie"]
-  },
-
-  
-  interpolation: {
-    escapeValue: true, 
+export const removeLngPrefix = (pathname) => {
+   
+    for (let lang of languages) {
+        
+        if(pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`) {
+            
+            return pathname.replace(`/${lang}`, '')
+             
+        }
+        
+    }
     
-    
-  },
+    return pathname
+}
 
-  react: {
-    wait: true
-  }
-});
+export const getLngFromUrl = pathname => {
+    for (let lang of languages) {
+        if (pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`) {
+            return lang;
+        }
+    }
+    return null;
+};
+
+const lng = getLngFromUrl(window.location.pathname) || i18n.language;
+
+i18n.use(LanguageDetector).use(initReactI18next).init({
+    fallbackLng: "en",
+    resources,
+    detection: {
+        caches: ['cookie']
+    },
+    lng
+})
 
 export default i18n;

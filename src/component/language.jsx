@@ -1,33 +1,33 @@
-import { useSelector, useDispatch } from "react-redux"
-import { setLanguage } from "../app/languages";
 import { useTranslation } from "react-i18next";
-import i18n from "../i18n";
-import { Suspense } from "react";
+import { useLocation } from "react-router-dom";
 
 
 
-function language() {
-  const { t, i18n } = useTranslation();
+
+function Language() {
+
+const {i18n} = useTranslation();
+const { search, hash} = useLocation();
+const {pathname} = location
+
+const switcher = (lng) => {
   
-  
-  const languages = ['En','Az'];
-
-
-  
-const handleLanguage =  lang => {
-     i18n.changeLanguage(lang)
-    
-     console.log(lang)
+  i18n.changeLanguage(lng)
+  let newPathname = pathname.slice(3)
+  window.location.replace(
+    `/${lng}${newPathname}${hash}`
+  )
+ 
 }
+  
+
 
   return (
-    <Suspense fallback="Loading">
-        {languages.map((lang, index) =>(
-            <button  className="text-white m-2 py-2 px-1 rounded-[10px]" key={index} onClick={() => handleLanguage(lang) } >{lang}</button>
-        ))}
-        <h2 className="text-white">{t('title')}</h2>
-    </Suspense>
+   <ul>
+    <li className="text-white" onClick={()=> switcher('en')}>En</li>
+    <li className="text-white" onClick={()=> switcher('az')}>Az</li>
+   </ul>
   )
 }
 
-export default language
+export default Language
