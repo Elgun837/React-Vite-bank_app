@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style'
-import { Hero, Navbar } from '../component'
+import { Footer, Hero, Navbar } from '../component'
 
 
 const About = () => {
@@ -10,6 +10,7 @@ const About = () => {
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
             <Hero />
+            <Footer />
         </div>
       </div>
       </div> 

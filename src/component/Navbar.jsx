@@ -12,7 +12,11 @@ const Navbar = () => {
       <Language />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
       <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
-                <Link className="text-white" to="about">About us</Link>
+                <Link className="text-white" to="home">Homepage</Link>
+               
+            </li>
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
+            <Link className="text-white" to="about">About us</Link>
             </li>
         {navLinks.map((nav, index) => (
           <li
@@ -39,8 +43,12 @@ const Navbar = () => {
         >
           
           <ul className="list-none flex flex-col justify-end items-center flex-1">
-            <li className={`font-poppins font-normal cursor-pointer text-[16px]`}>
-                <Link to="about">About us</Link>
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}>
+                <Link className="text-white" to="home">Homepage</Link>
+                
+            </li>
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}>
+            <Link className="text-white" to="about">About us</Link>
             </li>
             {navLinks.map((nav, index) => (
               <li

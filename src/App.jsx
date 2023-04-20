@@ -8,6 +8,7 @@ import { useLayoutEffect } from 'react';
 import {removeLngPrefix} from './i18n';
 import Languages from './component/language';
 import About from './pages/About';
+import Homepage from './pages/Homepage';
 const App = () => { 
   
   const { t, i18n ,i18n: { language } } = useTranslation();
@@ -38,7 +39,7 @@ const App = () => {
      
           
     <Routes>
-        <Route path='/home' element={<h1>{t('title')}</h1>}/>
+        <Route path='/home' Component={Homepage}/>
         <Route path='/about' Component={About}/>
         <Route path='/user' element={<h2>{t('Welcome')}</h2>}/>
     </Routes>
