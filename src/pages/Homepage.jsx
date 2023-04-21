@@ -15,7 +15,6 @@ const Homepage = () => {
           <CardDeal />
           <Clients />
           <CTA />
-          <FeedbackCard />
           <Footer />
       </div>
     </div>

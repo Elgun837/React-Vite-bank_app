@@ -2,6 +2,9 @@ import React from "react";
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
+import { useTranslation } from "react-i18next";
+
+
 const FeatureCard = ({icon, title, content, index}) => (
   <div
     className={`flex flex-grow p-6 rounded-[20px] ${
@@ -27,18 +30,19 @@ const FeatureCard = ({icon, title, content, index}) => (
     </div>
   </div>
 )
-const Business = () => (
+const Business = () => {
+  const {t, i18n } = useTranslation();
+  return(
     <section id="features" className={layout.section}>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
-          You do the business,
+         {t("Business.title1")}
+         
           <br className="sm:block-hidden" />
-          we'll handle the money.
+          {t("Business.title2")}
         </h2>
         <p className={`${styles.paragraph} max-w-[470] mt-5`}>
-          With the right credit card, you can improve youyr financial life by
-          building credit, earning rewards and saving money. But with hundreds
-          of credit cards on the market.
+          {t("Business.description")}
         </p>
         
         <Button styles="mt-10" />
@@ -50,7 +54,8 @@ const Business = () => (
       
       </div>
     </section>
-  );
+    )
+  }
 
 
 export default Business;

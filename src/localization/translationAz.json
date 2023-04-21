@@ -1,9 +1,11 @@
 {
     "Hero": {
       "title": "1 Ay Hesaba 20% Endirim",
-    "Welcome": "Salam",
-    "description": {
-      "part2": "Açıqlama"
-    }
+      "description": "Mütəxəssislərdən ibarət komandamız ehtiyaclarınıza ən uyğun olan kredit kartlarını müəyyən etmək üçün metodologiyadan istifadə edir. İllik faiz dərəcələrini, illik ödənişləri araşdırırıq."
+    },
+    "Business" : {
+      "title1" : "Siz bizneslə məşğul olursunuz, ",
+      "title2" : "biz pulu idarə edəcəyik.",
+      "description" : "Doğru kredit kartı ilə siz kredit qurmaq, mükafatlar qazanmaq və pula qənaət etməklə maliyyə həyatınızı yaxşılaşdıra bilərsiniz. Amma bazarda yüzlərlə kredit kartı ilə."
     }
 }

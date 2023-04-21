@@ -2,8 +2,11 @@
     "Hero":{
       "title": "20%Discount for 1 MonthAccount",
     "Welcome": "Welcome to React and react-i18next",
-    "description": {
-      "part2": "some description"
-    }
+    "description": "Our team of experts uses a methodology to identify the credit cards most likely to fit your needs. We examine annual percentage rates, annual fees."
+    },
+    "Business" : {
+      "title1" : "You do the business, ",
+      "title2" : "we'll handle the money.",
+      "description": "With the right credit card, you can improve youyr financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market."
     }
 }

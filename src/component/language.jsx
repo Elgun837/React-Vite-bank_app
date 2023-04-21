@@ -23,7 +23,7 @@ const switcher = (lng) => {
 
 
   return (
-   <ul>
+   <ul className="flex flex-row gap-2 ml-6">
     <li className="text-white" onClick={()=> switcher('en')}>En</li>
     <li className="text-white" onClick={()=> switcher('az')}>Az</li>
    </ul>
