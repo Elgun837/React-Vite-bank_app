@@ -5,7 +5,11 @@ import GetStarted from "./GetStarted";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 const Hero = () => {
-  const {t, i18n ,i18n: { language }} = useTranslation();
+  const {
+    t,
+    i18n,
+    i18n: { language },
+  } = useTranslation();
   return (
     <section
       id="home"
@@ -19,10 +23,7 @@ const Hero = () => {
         rounded-[10px] mb-2"
         >
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
-          <p className={`${styles.paragraph} ml-2`}>
-            {t('Hero.title')}
-            
-          </p>
+          <p className={`${styles.paragraph} ml-2`}>{t("Hero.title")}</p>
         </div>
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
@@ -40,9 +41,7 @@ const Hero = () => {
           {t("Hero.description")}
         </p>
       </div>
-      <div
-        className={`flex-1 ${styles.flexCenter} md:my-0 my-10 relative`}
-      >
+      <div className={`flex-1 ${styles.flexCenter} md:my-0 my-10 relative`}>
         <img
           src={robot}
           alt="billing"

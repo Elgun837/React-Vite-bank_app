@@ -11,13 +11,20 @@ const Navbar = () => {
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
       <Language />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-      <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
-                <Link className="text-white" to="home">Homepage</Link>
-               
-            </li>
-            <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
-            <Link className="text-white" to="about">About us</Link>
-            </li>
+        <li
+          className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}
+        >
+          <Link className="text-white" to="home">
+            Homepage
+          </Link>
+        </li>
+        <li
+          className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}
+        >
+          <Link className="text-white" to="about">
+            About us
+          </Link>
+        </li>
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -41,14 +48,20 @@ const Navbar = () => {
         bg-black-gradient absolute top-20 right-0 mx-4
         my-2 min-w-[140px] rounded-xl sidebar`}
         >
-          
           <ul className="list-none flex flex-col justify-end items-center flex-1">
-            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}>
-                <Link className="text-white" to="home">Homepage</Link>
-                
+            <li
+              className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}
+            >
+              <Link className="text-white" to="home">
+                Homepage
+              </Link>
             </li>
-            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}>
-            <Link className="text-white" to="about">About us</Link>
+            <li
+              className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}
+            >
+              <Link className="text-white" to="about">
+                About us
+              </Link>
             </li>
             {navLinks.map((nav, index) => (
               <li
@@ -60,12 +73,9 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
-            
-            
           </ul>
         </div>
       </div>
-     
     </nav>
   );
 };
