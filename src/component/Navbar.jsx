@@ -14,7 +14,7 @@ const Navbar = () => {
         <li
           className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}
         >
-          <Link className="text-white" to="home">
+          <Link className="text-white" to="/">
             Homepage
           </Link>
         </li>
@@ -52,7 +52,7 @@ const Navbar = () => {
             <li
               className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}
             >
-              <Link className="text-white" to="home">
+              <Link className="text-white" to="/">
                 Homepage
               </Link>
             </li>

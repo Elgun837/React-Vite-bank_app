@@ -3,12 +3,10 @@ import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
 import { useTranslation } from "react-i18next";
-import i18n from "../i18n";
+
 const Hero = () => {
   const {
-    t,
-    i18n,
-    i18n: { language },
+    t
   } = useTranslation();
   return (
     <section
