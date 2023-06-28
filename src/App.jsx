@@ -1,23 +1,13 @@
 import React from "react";
 import styles from "./style";
 import {
-  Navbar,
-  Hero,
-  Stats,
-  Business,
-  Billing,
-  CardDeal,
-  Testimonials,
-  Clients,
-  CTA,
-  Footer,
+  Navbar
 } from "./component";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { useLayoutEffect } from "react";
 import { removeLngPrefix } from "./i18n";
-import Languages from "./component/language";
 import About from "./pages/About";
 import Homepage from "./pages/Homepage";
 const App = () => {
